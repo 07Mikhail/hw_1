@@ -82,6 +82,7 @@ print(f'Poland: {round(((count_Poland/ len(countries_temperature[3][1])) * T / 1
 1. С помощью генератора собираем список чисел
 2. Создаём новый список, в него дальше будем добавлять числа из генерируемого списка
 3. Итерируемся по первому списку, условием проверяем кол-во переменных (если > 1, то добавляем переменную в новый список из пункта 2)
+4. Выводим уникальные значения в множестве
 '''
 
 user_input = [int(i) for i in input('Введи числа через пробел: ').split()]
@@ -92,7 +93,9 @@ for target_i in user_input:
   if user_input.count(target_i) > 1:
     new_user_list.append(target_i)
 
-print(target_i)
+set_new = set(new_user_list)
+
+print(set_new)
 
 
 
